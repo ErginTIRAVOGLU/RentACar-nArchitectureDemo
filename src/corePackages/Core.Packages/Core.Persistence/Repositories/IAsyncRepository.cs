@@ -51,7 +51,7 @@ public interface IAsyncRepository<TEntity, TEntityId> : IQuery<TEntity> where TE
 
     Task<TEntity> AddAsync(TEntity entity);
 
-    Task<ICollection<TEntity>> AddRandeAsync(ICollection<TEntity> entities);
+    Task<ICollection<TEntity>> AddRangeAsync(ICollection<TEntity> entities);
 
     Task<TEntity> UpdateAsync(TEntity entity);
 

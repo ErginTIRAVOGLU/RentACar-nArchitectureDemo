@@ -51,7 +51,7 @@ public interface IRepository<TEntity, TEntityId> : IQuery<TEntity> where TEntity
 
     TEntity Add(TEntity entity);
 
-    ICollection<TEntity> AddRande(ICollection<TEntity> entities);
+    ICollection<TEntity> AddRange(ICollection<TEntity> entities);
 
     TEntity Update(TEntity entity);
 
