@@ -51,15 +51,15 @@ public interface IAsyncRepository<TEntity, TEntityId> : IQuery<TEntity> where TE
 
     Task<TEntity> AddAsync(TEntity entity);
 
-    Task<ICollection<TEntity>> AddRandeAsync(ICollection<TEntity> entity);
+    Task<ICollection<TEntity>> AddRandeAsync(ICollection<TEntity> entities);
 
     Task<TEntity> UpdateAsync(TEntity entity);
 
-    Task<ICollection<TEntity>> UpdateRangeAsync(ICollection<TEntity> entity);
+    Task<ICollection<TEntity>> UpdateRangeAsync(ICollection<TEntity> entities);
 
     Task<TEntity> DeleteAsync(TEntity entity, bool permanent=false);
 
-    Task<ICollection<TEntity>> DeleteRangeAsync(ICollection<TEntity> entity, bool permanent = false);
+    Task<ICollection<TEntity>> DeleteRangeAsync(ICollection<TEntity> entities, bool permanent = false);
 
 
 }
