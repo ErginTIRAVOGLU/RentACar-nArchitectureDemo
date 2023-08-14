@@ -18,7 +18,7 @@ public interface IRepository<TEntity, TEntityId> : IQuery<TEntity> where TEntity
         CancellationToken cancellationToken = default
         );
 
-    IPaginate<TEntity> GetList(
+    Paginate<TEntity> GetList(
         Expression<Func<TEntity, bool>>? predicate = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
@@ -29,7 +29,7 @@ public interface IRepository<TEntity, TEntityId> : IQuery<TEntity> where TEntity
         CancellationToken cancellationToken = default
         );
 
-    IPaginate<TEntity> GetListByDynamic(
+    Paginate<TEntity> GetListByDynamic(
         DynamicQuery dynamic,
         Expression<Func<TEntity, bool>>? predicate = null,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
