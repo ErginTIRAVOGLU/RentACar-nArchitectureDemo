@@ -1,6 +1,7 @@
 ﻿using Core.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace Domain.Entities;
 public class Model:Entity<Guid>
 {
     public string Name { get; set; }
+    [Column(TypeName = "decimal(18,2)")]
     public decimal DailyPrice { get; set; }
     public string ImageUrl { get; set; }
 
