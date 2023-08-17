@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Brands.Queries.GetList;
 
-public class GetListBrandQuery:IRequest<GetListResponse<GetListBrandListItemDto>>
+public class GetListBrandQuery:IRequest<GetListResponse<GetListBrandListItemDto>>:ICacheableRequest
 {
     public PageRequest PageRequest { get; set; }
 
